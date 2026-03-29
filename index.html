@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой Калькулятор | Лабораторная 1</title>
+    <title>Мой Калькулятор| Лабораторная 1</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
  
-<div class="calc-wrapper">
-    <div class="inputs">
-        <input type="number" id="num1" placeholder="0">
-        <select id="operation">
+<div class="calc">
+    <div class="calc__inputs">
+        <input type="number" id="num1" class="calc__field" placeholder="0">
+        <select id="operation" class="calc__select">
             <option value="+">+</option>
             <option value="-">-</option>
             <option value="*">*</option>
             <option value="/">/</option>
         </select>
-        <input type="number" id="num2" placeholder="0">
+        <input type="number" id="num2" class="calc__field" placeholder="0">
     </div>
  
-    <p id="error-msg"></p>
+    <p id="error-msg" class="calc__error"></p>
  
-    <button onclick="calculate()">Подсчитать</button>
+    <button class="calc__btn" onclick="calculate()">Подсчитать</button>
  
-    <div id="results"></div>
+    <div id="results" class="calc__history"></div>
 </div>
  
 <script src="script.js"></script>

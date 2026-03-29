@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.calc-wrapper {
+.calc {
     background: #b7f2c0;
     padding: 20px;
     border-radius: 10px;
@@ -14,14 +14,17 @@ body {
     gap: 10px;
 }
 
-.inputs {
+.calc__inputs {
     display: flex;
     flex-direction: row;
     gap: 12px;
     width: 100%;
 }
 
-input, select, button, #results {
+.calc__field, 
+.calc__select, 
+.calc__btn, 
+.calc__history {
     padding: 10px;
     font-size: 18px;
     border-radius: 12px;
@@ -32,29 +35,30 @@ input, select, button, #results {
     box-sizing: border-box;
 }
 
-input {
-    width: 100%;
+.calc__field { 
+  width: 100%; 
 }
 
-select {
-    width: 80px;
-    cursor: pointer;
+.calc__select { 
+  width: 80px; 
+  cursor: pointer; 
 }
 
-button {
-    padding: 8px 40px;
-    cursor: pointer;
-    border-style: solid; 
+.calc__btn {
+  padding: 8px 40px; 
+  cursor: pointer; 
+  border-style: solid; 
 }
 
-#error-msg {
-    color: red;
-    font-size: 14px;
-    margin: 0;
-    min-height: 18px;
+.calc__error { 
+  color: red; 
+  font-size: 14px; 
+  margin: 0; 
+  min-height: 18px; 
 }
 
-#results {
+
+.calc__history {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -63,20 +67,21 @@ button {
     width: 100%;
 }
 
-.result-item {
+.calc__result-item {
     margin: 0;
     font-size: 16px;
 }
 
-.result-item.old {
+.calc__result-item--old {
     opacity: 0.35;
 }
 
 @media (max-width: 500px) {
-    .inputs {
+    .calc__inputs {
         flex-direction: column;
     }
-    select, button {
+    .calc__select, 
+    .calc__btn {
         width: 100%;
     }
 }

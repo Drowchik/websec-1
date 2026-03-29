@@ -1,3 +1,5 @@
+const MAX_HISTORY_ITEMS = 8;
+
 var calcHistory = []; 
 
 function calculate() {
@@ -30,6 +32,10 @@ function calculate() {
     var line = a + ' ' + op + ' ' + b + ' = ' + result;
     
     calcHistory.push(line);
+    
+    if (calcHistory.length > MAX_HISTORY_ITEMS) {
+        calcHistory.shift();
+    }
 
     showResults();
 }
@@ -41,12 +47,10 @@ function showResults() {
     for (var i = 0; i < calcHistory.length; i++) {
         var p = document.createElement('p');
         p.textContent = calcHistory[i];
-        p.className = 'result-item';
-        
-        if (i === calcHistory.length - 1) {
-            p.classList.add('latest');
-        } else {
-            p.classList.add('old');
+        p.className = 'calc__result-item';
+
+        if (i !== calcHistory.length - 1) {
+            p.classList.add('calc__result-item--old');
         }
         
         block.appendChild(p);
