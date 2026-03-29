@@ -1,0 +1,82 @@
+body {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.calc-wrapper {
+    background: #b7f2c0;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+}
+
+input, select, button, #results {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: 1px dashed red;
+    background: transparent;
+    color: red;
+    outline: none;
+    box-sizing: border-box;
+}
+
+input {
+    width: 100%;
+}
+
+select {
+    width: 80px;
+    cursor: pointer;
+}
+
+button {
+    padding: 8px 40px;
+    cursor: pointer;
+    border-style: solid; 
+}
+
+#error-msg {
+    color: red;
+    font-size: 14px;
+    margin: 0;
+    min-height: 18px;
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 15px;
+    min-height: 60px;
+    width: 100%;
+}
+
+.result-item {
+    margin: 0;
+    font-size: 16px;
+}
+
+.result-item.old {
+    opacity: 0.35;
+}
+
+@media (max-width: 500px) {
+    .inputs {
+        flex-direction: column;
+    }
+    select, button {
+        width: 100%;
+    }
+}
